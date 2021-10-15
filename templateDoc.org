@@ -1,0 +1,61 @@
+#+Title: Research with Org-mode for Emacs
+#+Author: Colleen O'Briant
+#+date: {{{time(%B %e %Y)}}}
+#+EXCLUDE_TAGS: noexport
+#+OPTIONS: d:nil
+
+This document contains headlines, text, lists, and tables.
+You can export it to html (C-c C-e h o), or to LaTeX (C-c C-e l o).
+
+* Top level headline
+
+text
+
+** Second level
+
+text
+
+*** Third level
+
+text
+
+* Another top level headline                                       :noexport:
+
+The noexport tag (C-c C-q to set a tag for a headline) will skip any information under this headline when I export the document because
+
+#+EXCLUDE_TAGS: noexport
+
+in the header.
+
+* A third top level headline
+
+text
+
+- Lists also allow for visibility cycling
+  - item 1
+  - item 2
+  - item 3
+    - under item 3
+
+- [ ] Checkboxes are nice (C-c C-c for cycling between checked and unchecked)
+  - [ ] another checkbox
+- [ ] more checkboxes!
+
+** TODO I love using "TODO" in headlines (C-c C-t for cycling)
+
+:my_drawer:
+Drawers can contain anything except for headlines and other drawers.
+#+OPTIONS: d:nil
+in the header makes it so that contents of drawers never export.
+:END:
+
+** Tables
+
+Org-mode has a built-in table editor that can be very useful. I use it for grading a lot.
+
+| Name  | Question 1 | Question 2 | Question 3 | Total |
+|-------+------------+------------+------------+-------|
+| Peter |         50 |         25 |         25 |   100 |
+| Anna  |         45 |         20 |         20 |    85 |
+#+TBLFM: $5=vsum($2..$4)
+

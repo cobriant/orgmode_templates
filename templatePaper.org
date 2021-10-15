@@ -1,0 +1,62 @@
+#+title: Paper Title
+#+date: {{{time(%B %e %Y)}}}
+#+OPTIONS: d:nil toc:nil author:nil
+#+LaTeX_HEADER: \author{Colleen O'Briant\\ University of Oregon Department of Economics \\Email: cobriant@uoregon.edu}
+#+STARTUP: indent
+#+LATEX_HEADER: \usepackage{setspace, amsmath, float, caption, natbib, threeparttable, graphicx}
+#+latex_class_options: [12pt]
+#+LATEX_HEADER: \doublespacing
+#+LATEX_HEADER: \captionsetup{labelfont={bf}}
+#+LATEX_HEADER: \usepackage[legalpaper, margin=1.25in]{geometry}
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[english]{babel}
+#+LATEX_HEADER: \bibliographystyle{abbrvnat}
+#+LATEX_HEADER: \setcitestyle{authoryear,open={(},close={)}}
+#+LATEX_HEADER: \usepackage{caption}\captionsetup[figure]{position=above,}
+
+:todos:
+- Paper outline
+  - [ ] abstract
+    - [ ] 100 words
+    - [ ] 150 words
+  - [ ] introduction/literature review
+  - [ ] background section
+  - [ ] data section
+  - [ ] model section
+  - [ ] results section
+  - [ ] conclusion
+  - [ ] bibliography
+:END:
+:meetings:
+i like to type up notes from my meetings with advisors and put links to those files here
+:END:
+
+#+BEGIN_abstract
+
+This is where the abstract goes
+
+#+END_abstract
+
+\newpage
+
+* Introduction
+
+# Write notes to yourself using `#`
+
+I use org-ref for managing my bibliography with org-mode. There's a very useful youtube video the creator of that package made on the github page [[https://github.com/jkitchin/org-ref][here]].
+
+Once you add all your papers to your bibliography (I have a file called fieldpaper.bib), to cite one in your paper just hit C-c ], and find the paper. Org-ref generates a bibliography and citation for you: citep:angrist2014
+
+* Data
+* Model
+* Results
+* Conclusion
+
+\newpage
+
+[[bibliographystyle:apalike]]
+[[bibliography:~/fieldpaper.bib]]
+
+\newpage
+
+* Tables and Figures

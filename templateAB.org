@@ -1,0 +1,145 @@
+#+Title: Annotated Bibliography Template
+#+Author: Colleen O'Briant
+
+:reading_list:
+- [ ] history of statistics, [[*stigler 1990][stigler 1990]]
+- [ ] Structure and Interpretation of Computer Programs, [[*abelson 1984][abelson 1984]]
+:END:
+
+* Econometrics
+**** hayashi 2000
+***** front matter
+- [[~/Documents/metrics_hayashi.pdf][link]]
+- Title: Econometrics
+- [[http://fhayashi.fc2web.com/hayashi_econometrics.htm][datasets and answers]]
+
+***** DONE Preface
+CLOSED: [2021-04-29 Thu 15:05]
+   
+- Most estimation procedures are a specialization of the GMM  estimation principle. When GMM is applied to the classical linear regression model, the resulting estimation procedure is OLS.
+
+***** TODO [12%] 1 Finite-Sample Properties of OLS
+  
+****** DONE Abstract
+CLOSED: [2021-04-29 Thu 15:07]
+
+- The OLS estimator: the most basic estimation procedure in econometrics.
+- This chapter: what are statistical properties of the OLS estimator that are valid for any sample size, even small sample sizes?
+- What happens when regressors aren't necessarily strictly exogenous?
+- Final section: finite-sample theory to the estimation of the cost function using cross-section data on individual firms: are there increasing returns to scale in electricity supply? If so, the industry should be regulated. In this particular application, why is OLS an appropriate estimation procedure?
+
+****** TODO 1.1 The Classical Linear Regression Model
+
+- A model: a set of restrictions on the joint distribution of the dependent and independent variables. Or, a set of joint distributions satisfying a set of assumptions.
+
+- The classical regression model is a set of joint distributions satisfying A1.1 - A1.4:
+
+- Assumption 1.1: linearity
+  + $y_i = \beta_1 x_{i1} + \beta_2x_{i2}+...+\beta_Kx_{iK} + \epsilon_i$
+  + For i = 1 to n, where betas are unknown parameters to be estimated and epsilon_i is the unobserved error term with certain properties specified below.
+  + $\beta_2 = \delta y_i / \delta x_i2$: what happens to y when x_2 changes by one unit, holding everything else constant.
+  + The *linearity assumption implies that the marginal effect does not depend on the level of regressors*: no matter if x_2 is large or small, $\del y_i / \del x_i2$ is the same.
+  
+- Example 1.1: consumption function
+  - $CON_i = \beta_1 + \beta_2 YD_i + \epsilon_i$
+  - CON is consumption, YD is disposable income
+  - The error term represents other variables besides disposable income that influence consumption like financial assets that may or may not be observable and may or may not be impossible to measure.
+
+- Example 1.2: the linearity assumption isn't as restrictive as it may seem because you can transform variables:
+  - log(wage) = \beta_0 + \beta_1 tenure + \beta_2 experience + \beta_3 education + u_i
+  - wage = exp(\beta_0)exp(\beta_1 tenure)exp(\beta_2 experience)exp(\beta_3 education)exp(u_i)
+  - coefficients have interpretation of percent change instead of level change. beta_3 = .05 indicates an extra year of education raises wage rate by 5%.
+  - diminishing marginal returns to eductation can be accomodated by adding education^2: log(wage) ~ education + education^2
+    - marginal effect of education: d log(wage)/dS = \beta_1 + 2\beta_5 education. If \beta_5 is negative, the marginal effect of education declines with the level.
+
+- matrix notation
+  - x_i, \beta: Kx1 vectors
+  - y_i = x_i'\beta + \epsilon_i, i = 1...n
+  - y, e, are nx1 vectors
+  - X is nXK
+  - observation 1: y_1 = x_11\beta_1 + .. + e_1
+  - y = X\beta + e
+
+- strict exogeneity assumption: A 1.2
+  - E(\epsilon_i | X) = 0, i=1, 2,..n
+
+- the classical regression model for random samples
+
+- fixed regressors
+
+- questions for review (30)
+
+****** TODO 1.2 The Algebra of Least Squares
+
+- OLS minimizes the sum of squared residuals
+- Normal equations
+
+****** TODO 1.3 Finite-Sample Properties of OLS
+****** TODO 1.4 Hypothesis Testing under Normality
+****** TODO 1.5 Relation to Maximum Likelihood
+****** TODO 1.6 Generalized Least Squares
+****** TODO 1.7 Application: Returns to scale in electricity supply
+ 
+***** 2 Large-Sample Theory
+***** 3 Single-Equation GMM
+***** 4 Multiple-Equation GMM
+***** 5 Panel Data
+***** 6 Serial Correlation
+***** TODO 7 Extremum Estimators
+
+****** TODO 7.1 extremum estimators
+
+- What are classified as extremum estimators?
+  - linear and nonlinear least squares
+  - linear and nonlinear GMM
+  - ML
+
+
+
+****** TODO 7.2 consistency
+
+****** TODO 7.3 asymptotic normality
+
+****** TODO 7.4 hypothesis testing
+
+****** TODO 7.5 numerical optimization
+
+***** TODO 8 Examples of Maximum Likelihood
+
+****** 8.1 qualitative response models
+
+****** 8.2 truncated regression models
+
+****** 8.3 censored regression (tobit) models
+
+****** 8.4 multivariate regressions
+
+****** 8.5 FIML
+
+****** 8.6 LIML
+
+****** 8.7 Serially correlated observations
+
+***** 9 Unit-Root Econometrics
+***** 10 Cointegration
+
+* Statistics
+**** stigler 1990
+***** front matter
+- [[~/Documents/Stigler1990_HistoryofStats.pdf][link]]
+- Title: The History of Statistics
+- The measurement of uncertainty before 1990
+- Stephen Stigler
+***** 1: the development of mathematical statistics in astronomy and geodesy before 1827
+***** 2: the struggle to extend a calculus of probabilities to the social sciences
+***** 3: a breakthrough in studies of heredity
+  
+* Programming
+**** abelson 1984
+
+Title: Structure and Interpretation of Computer Programs
+
+[[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html?fbclid=IwAR0kErZxag1uKJOoMcxysEUqKNje8zhbPTL58UKnrvLfPSj94GIPlvDpJdA%23%25_toc_start][link]]
+
+
+

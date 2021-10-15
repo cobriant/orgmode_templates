@@ -1,0 +1,42 @@
+#+Title: EC 999: Exam Template
+#+Options: toc:nil; num:nil, date:nil
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage{amsmath, pifont}
+
+Instructions: blah blah blah
+
+# Write some notes to yourself (like the correct answer) using `#`, it will not export.
+
+* Part 1: Multiple Choice (2 points each)
+
+1) This is question 1
+
+   a) True
+   b) False
+   c) It depends
+
+2) This is question 2
+
+   a) $\frac{\sum(x_i - \bar{x})y_i}{\sum(x_i - \bar{x})^2}$
+   b) $\beta_1$
+   c) $\frac{\beta_1}{n - 1}$
+   d) $\frac{\sum(x_i - \bar{x})u_i}{\sum(x_i - \bar{x})^2}$
+
+3. A fill-in-the-blank question:
+
+   Colleen is $\underline{\hspace{2cm}}$.
+
+   a) great
+   b) cool
+   c) nice
+   d) all of the above
+
+* Part 2: Short answer
+
+More tables:
+
+|          | claudia | daniel | ernest | florence |
+|----------+---------+--------+--------+----------|
+| wage_0   | $10     | $10    | $20    | $20      |
+| wage_1   | $20     | $0     | $30    | $40      |
